@@ -15,26 +15,26 @@ const PORT = process.env.PORT;
 
 
 //belum selesai
-// app.patch("/user/:id", async (req, res) => {
-//     const userId = res.params.id;
-//     const userData = req.body;
-//     const user = await prisma.user.update({
-//         where: {
-//             id: parseInt(userId),
-//         },
-//         data: {
-//             name: userData.name,
-//             phone: userData.phone,
-//             address: userData.address,
-//             email: userData.email,
-//             password: userData.password
-//         }
-//     })
-//     res.send({
-//         data: user,
-//         message: "Data berhasil update"
-//     })
-// })
+app.patch("/user/:id", async (req, res) => {
+    const userId = req.params.id;
+    const userData = req.body;
+    const user = await prisma.user.update({
+        where: {
+            id: parseInt(userId),
+        },
+        data: {
+            name: userData.name,
+            phone: userData.phone,
+            address: userData.address,
+            email: userData.email,
+            password: userData.password
+        }
+    })
+    res.send({
+        data: user,
+        message: "Data berhasil update"
+    })
+})
 
 
 //coba gitt
