@@ -1,6 +1,6 @@
 const express = require("express");
 const prisma = require("../db");
-const { getAllUsers, postUserById } = require("./user.service");
+const { getAllUsers, postUserById, deleteUserById } = require("./user.service");
 
 
 const router = express.Router();
