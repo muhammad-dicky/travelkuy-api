@@ -28,7 +28,7 @@ app.delete("/user/:id", async (req, res) => {
 })
 
 
-//coba git
+//coba gitt
 
 app.get("/api", (req, res) => {
     res.send("wassup man");
