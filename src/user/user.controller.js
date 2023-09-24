@@ -1,6 +1,6 @@
 const express = require("express");
 const prisma = require("../db");
-const { getAllUsers, postUserById, deleteUserById } = require("./user.service");
+const { getAllUsers, postUserById, deleteUserById, patchUserById } = require("./user.service");
 
 
 const router = express.Router();
@@ -29,6 +29,17 @@ router.delete("/:id", async (req, res) => {
     } catch (error) {
         res.status(400).send(error.message)
     }
+})
+
+
+router.patch("/:id", async (req, res) => {
+    const userId = req.params.id;
+    const userData = req.body;
+    const user = patchUserById(parseInt(userId), userData)
+    res.send({
+        data: user,
+        message: "Data berhasil update"
+    })
 })
 
 module.exports = router;

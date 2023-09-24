@@ -37,9 +37,25 @@ const deleteUserById = async (id) => {
     })
 }
 
+const patchUserById = async (id, productData) => {
+    const user = await prisma.user.update({
+        where: {
+            id: parseInt(id)
+        },
+        data: {
+            name: productData.name,
+            phone: productData.phone,
+            address: productData.address,
+            email: productData.email,
+            password: productData.password
+        }
+    })
+    return user;
+}
 
 module.exports = {
     getAllUsers,
     postUserById,
-    deleteUserById
+    deleteUserById,
+    patchUserById,
 }
