@@ -10,6 +10,12 @@ router.get("/", async (req, res) => {
     res.send(user);
 })
 
+// router.get("/:id", async (req, res) => {
+//     const user = await prisma.user.findUnique({
+
+//     })
+// })
+
 
 router.post("/", async (req, res) => {
     const userData = req.body;

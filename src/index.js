@@ -14,7 +14,6 @@ app.use(express.json());
 const PORT = process.env.PORT;
 
 
-
 //coba gitt
 
 app.get("/api", (req, res) => {
@@ -27,7 +26,5 @@ app.use("/product", productController);
 app.listen(PORT, () => {
     console.log("Express started at port: " + PORT);
 })
-
-
 
 
