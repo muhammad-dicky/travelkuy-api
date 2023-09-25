@@ -80,13 +80,19 @@ The TravelKuy API should now be running locally at `http://localhost:3000`. You 
 
 Here are the main API endpoints provided by the TravelKuy API:
 ⚠️ UNDER CONSTRUCTION ⚠️
-- **POST /api/auth/signup**: Create a new user account.
-- **POST /api/auth/login**: Log in with an existing user account.
-- **GET /api/packages**: Retrieve a list of available travel packages.
-- **GET /api/packages/:id**: Retrieve details of a specific travel package.
-- **POST /api/bookings**: Book a travel package.
-- **GET /api/bookings**: Retrieve a list of user bookings.
-- **GET /api/bookings/:id**: Retrieve details of a specific booking.
+## USER
+- **POST /user/**: Create a new user. (req data)
+- **GET /user/:id**: Retrieve user by id. (req id)
+- **GET /user/**: Retrieve all users.
+- **PATCH /user/:id**: Patch user by id. (req id & data)
+- **DELETE /user/:id**: Delete user by id. (req id)
+
+## PRODUCT
+- **POST /product/**: Create a new product. (req data)
+- **GET /product/:id**: Retrieve product by id. (req id)
+- **GET /product/**: Retrieve all products.
+- **PATCH /product/:id**: Patch product by id. (req id & data)
+- **DELETE /product/:id**: Delete product by id. (req id)
 
 For more detailed information on each endpoint and how to use them, please refer to the API documentation.
 
