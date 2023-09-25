@@ -12,6 +12,10 @@ router.get("/", async (req, res) => {
     res.send(product);
 });
 
+
+
+
+
 router.post("/", async (req, res) => {
     const productData = req.body;
     const productResponse = await postProductById(productData);

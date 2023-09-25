@@ -5,6 +5,29 @@ const getAllUsers = async () => {
     return user;
 }
 
+// GET user by ID
+const findUserById = async (id) => {
+    if (typeof id !== "number") {
+        throw Error("Id harus number")
+    }
+    const user = await prisma.user.findUnique({
+        where: {
+            id: parseInt(id),
+        }
+    })
+    if (!user) {
+        throw new Error("User tidak ada")
+    }
+    await prisma.user.findUnique({
+        where: {
+            id: parseInt(id)
+        }
+    })
+    return user;
+
+}
+
+// POST user
 const postUserById = async (productData) => {
     const user = await prisma.user.create({
         data: {
@@ -18,6 +41,7 @@ const postUserById = async (productData) => {
     return user
 }
 
+// DELETE user by ID
 const deleteUserById = async (id) => {
     if (typeof id !== "number") {
         throw Error("Id harus number");
@@ -37,8 +61,20 @@ const deleteUserById = async (id) => {
     })
 }
 
+// PATCH user by ID
 const patchUserById = async (id, productData) => {
-    const user = await prisma.user.update({
+    if (typeof id !== "number") {
+        throw Error("ID harus number")
+    }
+    const user = await prisma.user.findUnique({
+        where: {
+            id: parseInt(id),
+        }
+    })
+    if (!user) {
+        throw Error("User tidak ada")
+    }
+    await prisma.user.update({
         where: {
             id: parseInt(id)
         },
@@ -58,4 +94,5 @@ module.exports = {
     postUserById,
     deleteUserById,
     patchUserById,
+    findUserById,
 }
