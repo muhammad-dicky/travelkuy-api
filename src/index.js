@@ -16,6 +16,15 @@ const PORT = process.env.PORT;
 
 
 
+// router.get("/", async (req, res) => {
+//     const product = await prisma.product.findMany();
+//     res.send(product);
+// });
+
+app.get("/reviews", async (req, res) => {
+    const review = await prisma.review.findMany();
+    res.send(review);
+})
 
 
 //coba gitt

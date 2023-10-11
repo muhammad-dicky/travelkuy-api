@@ -26,3 +26,11 @@ model Product {
     description String
     image       String
 }
+
+model review {
+    id          Int    @id @default(autoincrement())
+    img         String
+    name        String
+    status      String
+    description String
+}
