@@ -1,15 +1,19 @@
 # TravelKuy API
 ⚠️ UNDER CONSTRUCTION ⚠️
-Welcome to the TravelKuy API repository! This repository contains the backend code for the TravelKuy application, a travel booking platform. This API is built using Express.js, Prisma, Cors, Dotenv, and Nodemon.
+Welcome to the TravelKuy API repository! This repository contains the backend code for the TravelKuy application, a travel booking platform. This API is built using Express.js, Prisma, Cors, Dotenv, Nodemon, and supabase.
 
 ## Table of Contents
 
-- [Introduction](#introduction)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
-- [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
+- [TravelKuy API](#travelkuy-api)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Tech Stack](#tech-stack)
+  - [Getting Started](#getting-started)
+  - [API Endpoints](#api-endpoints)
+  - [USER](#user)
+  - [PRODUCT](#product)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
