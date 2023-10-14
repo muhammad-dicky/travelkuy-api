@@ -25,7 +25,11 @@ app.get("/reviews", async (req, res) => {
     const review = await prisma.review.findMany();
     res.send(review);
 })
-
+// app.get("/products", async (req, res) => {
+//     const product = await prisma.product.findMany();
+//     res.send(product);
+// })
+app.use("/products", productController);
 
 //coba gitt
 
@@ -34,7 +38,7 @@ app.get("/api", (req, res) => {
 })
 
 app.use("/user", userController);
-app.use("/product", productController);
+// app.use("/product", productController);
 
 app.listen(PORT, () => {
     console.log("Express started at port: " + PORT);

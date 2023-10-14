@@ -21,10 +21,10 @@ model User {
 
 model Product {
     id          Int    @id @default(autoincrement())
-    name        String
-    price       Int
+    img         Json?
+    rating      Int
+    price       String
     description String
-    image       String
 }
 
 model review {
